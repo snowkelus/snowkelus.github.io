@@ -19,7 +19,7 @@ jobs:
             uses: Eun/http-server-action@v1.0.10
             with:
               directory: ${{ github.workspace }}
-              port: 8080
+              port: 80
               no-cache: false
               index-files: |
                 ["snowkelus.html", "snowkelus.htm"]
