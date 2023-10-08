@@ -1,23 +1,11 @@
 {
   "name": "Snowkelus",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "GitHub Action to start a http server that serves files",
   "main": "index.js",
-  "scripts": {
-    "test": "dockerlint Dockerfile"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/snowkelus/snowkelus.github.io.git"
-  },
-  "keywords": [],
-  "author": "Snowkelus <openpatents@snowkel.us> (https://www.snowkel.us/)",
-  "license": "(GPL 3.0)",
-  "bugs": {
-    "url": "https://github.com/snowkelus/snowkelus.github.io/issues"
-  },
-  "homepage": "https://github.com/snowkelus/snowkelus.github.io#readme",
+  "author": "Snowkelus",
+  "license": "MIT",
   "dependencies": {
-    "dockerlint": "^0.3.9"
+    "@actions/core": "^1.10.0"
   }
 }

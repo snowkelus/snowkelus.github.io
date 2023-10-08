@@ -1,4 +1,4 @@
-name: Snowkelus (Apache)
+name: Type Ghast (HTTP Server)
 on:
   push:
     branches:
@@ -22,7 +22,7 @@ jobs:
               port: 8080
               no-cache: false
               index-files: |
-                ["snowkelus.html", "snowkelus.htm"]
+                ["index.html", "index.htm"]
               allowed-methods: |
                 ["GET", "HEAD"]
               content-types: |
@@ -42,3 +42,7 @@ jobs:
                 }
               log: "log.txt"
               logTime: "false"
+          -
+              run: |
+                curl -vvvv https://typeghast.vercel.app/index.html
+                cat log.txt
