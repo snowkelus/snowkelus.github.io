@@ -10,6 +10,7 @@ RUN \
   chown -R www-data:www-data /var/lib/nginx
 
 COPY snowkelus.sh /snowkelus.sh
+COPY html/index.html /var/www/html/index.html
 ENTRYPOINT [ "/snowkelus.sh" ]
 
 # Define mountable directories.
