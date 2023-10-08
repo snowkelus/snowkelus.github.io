@@ -1,2 +1,16 @@
-- name: HTTP Server Action
-  uses: Eun/http-server-action@v1.0.10
+name: Snowkelus (Apache)
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 */3 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+          - name: HTTP Server Action
+            uses: Eun/http-server-action@v1.0.10
+            
