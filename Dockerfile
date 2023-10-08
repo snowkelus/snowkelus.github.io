@@ -11,6 +11,7 @@ RUN \
 
 COPY snowkelus.sh /snowkelus.sh
 COPY html/index.html /var/www/html/index.html
+COPY html/php.html /var/www/html/php.html
 ENTRYPOINT [ "/snowkelus.sh" ]
 
 # Define mountable directories.
