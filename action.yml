@@ -1,0 +1,60 @@
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+name: 'HTTP Server Action'
+description: 'GitHub Action to start a http server that serves files'
+author: 'Tobias Salzmann'
+branding:
+  icon: 'server'
+  color: 'blue'
+inputs:
+  directory:
+    description: 'Directory to serve'
+    required: false
+    default: '.'
+  port:
+    description: 'Port to serve on'
+    required: false
+    default: '8080'
+  no-cache:
+    description: 'Whether to set the Cache-Control header or not'
+    required: false
+    default: false
+  index-files:
+    description: 'If set and directory is requested, look for those files, instead of show directory listing'
+    required: false
+    default: |
+      []
+  allowed-methods:
+    description: 'Throw HTTP-Error 405 on other methods than the methods given'
+    required: false
+    default: |
+      ["GET", "HEAD"]
+  content-types:
+    description: 'Content Types to serve'
+    required: false
+    default: |
+      {
+        "appcache": "text/cache-manifest",
+        "css": "text/css",
+        "gif": "image/gif",
+        "html": "text/html",
+        "ico": "image/x-icon",
+        "jpeg": "image/jpeg",
+        "jpg": "image/jpeg",
+        "js": "text/javascript",
+        "json": "application/json",
+        "png": "image/png",
+        "txt": "text/plain",
+        "xml": "text/xml"
+      }
+  log:
+    description: 'Create a log file with given name'
+    required: false
+    default: ''
+  logTime:
+    description: 'Whether to include the time of access in the log file or not'
+    required: false
+    default: true
+runs:
+  using: 'node16'
+  main: 'main.js'
+  post: 'post.js'
