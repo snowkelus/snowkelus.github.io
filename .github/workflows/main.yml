@@ -42,4 +42,3 @@ jobs:
                 }
               log: "log.txt"
               logTime: "false"
-          -
